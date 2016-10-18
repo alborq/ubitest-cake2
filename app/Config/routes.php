@@ -19,17 +19,16 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
- 
+
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
- * to use (in this case, /app/View/Pages/home.ctp)...
+ * to use (in this case, /app/View/Pages/index.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-/**
- * ...and connect the rest of 'Pages' controller's URLs.
- */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect('/', array('controller' => 'student', 'action' => 'index'));
+	Router::connect('/addStudent', array('controller' => 'student', 'action' => 'addStudent'));
+	Router::connect('/removeStudent', array('controller' => 'student', 'action' => 'removeStudent'));
+	Router::connect('/addNote', array('controller' => 'student', 'action' => 'addNote'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

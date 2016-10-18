@@ -1,4 +1,6 @@
 <?php
+require_once '../Vendor/autoload.php';
+
 /**
  * The Front Controller for handling every request
  *
